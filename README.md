@@ -142,7 +142,7 @@ BRUNO, BONES, and SELMA are the three first responder models. They share scenes 
 | Cardiac arrest in a burning structure | BRUNO (scene safety, egress) | BONES (resuscitation protocol) |
 | Confined space rescue | BRUNO (rescue ops, atmospheric monitoring) | BONES (patient extraction and care) |
 
-> ABBY (digital forensics) and ATTICUS (legal defense) are separate tools and operate independently of the first responder suite.
+> ABBY (digital forensics) operates independently of the first responder suite. SELMA pairs with [ATTICUS](https://codeberg.org/Ronin48/ATTICUS) on the legal side — prosecution and defense counterparts.
 
 ---
 
