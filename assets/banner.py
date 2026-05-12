@@ -1,0 +1,19 @@
+"""BRUNO ASCII banner."""
+
+BANNER = r"""
+██████╗ ██████╗ ██╗   ██╗███╗   ██╗ ██████╗
+██╔══██╗██╔══██╗██║   ██║████╗  ██║██╔═══██╗
+██████╔╝██████╔╝██║   ██║██╔██╗ ██║██║   ██║
+██╔══██╗██╔══██╗██║   ██║██║╚██╗██║██║   ██║
+██████╔╝██║  ██║╚██████╔╝██║ ╚████║╚██████╔╝
+╚═════╝ ╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═══╝ ╚═════╝
+
+Building Rescue and Unified Navigation Operations
+For the crews who go in when everyone else is coming out.
+
+Named after Chief Alan Brunacini — Phoenix Fire Department
+Father of the Incident Command System. "Be Nice."
+"""
+
+if __name__ == "__main__":
+    print(BANNER)

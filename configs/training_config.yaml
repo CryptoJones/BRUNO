@@ -1,0 +1,56 @@
+# BRUNO QLoRA Training Configuration
+
+model:
+  base_model: "meta-llama/Llama-3.3-70B-Instruct"
+  model_type: "llama"
+  torch_dtype: "bfloat16"
+  device_map: "auto"
+
+quantization:
+  load_in_4bit: true
+  bnb_4bit_compute_dtype: "bfloat16"
+  bnb_4bit_use_double_quant: true
+  bnb_4bit_quant_type: "nf4"
+
+lora:
+  r: 64
+  lora_alpha: 128
+  target_modules:
+    - "q_proj"
+    - "v_proj"
+    - "k_proj"
+    - "o_proj"
+    - "gate_proj"
+    - "up_proj"
+    - "down_proj"
+  lora_dropout: 0.05
+  bias: "none"
+  task_type: "CAUSAL_LM"
+
+training:
+  output_dir: "/workspace/BRUNO/models/bruno-lora"
+  num_train_epochs: 3
+  per_device_train_batch_size: 2
+  gradient_accumulation_steps: 8
+  gradient_checkpointing: true
+  optim: "paged_adamw_8bit"
+  save_steps: 100
+  logging_steps: 25
+  learning_rate: 2.0e-4
+  weight_decay: 0.001
+  fp16: false
+  bf16: true
+  max_grad_norm: 0.3
+  max_steps: -1
+  warmup_ratio: 0.03
+  group_by_length: true
+  lr_scheduler_type: "cosine"
+  report_to: "none"
+
+data:
+  dataset_path: "/workspace/BRUNO/data/processed/bruno_dataset.jsonl"
+  max_seq_length: 4096
+  train_split: 0.95
+
+merge:
+  merged_model_path: "/workspace/BRUNO/models/bruno-merged"
