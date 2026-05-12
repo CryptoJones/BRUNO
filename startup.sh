@@ -41,7 +41,8 @@ pip install -q \
     "datasets" \
     "pyyaml" \
     "requests" \
-    "tqdm"
+    "tqdm" \
+    "rich"
 
 # Generate synthetic data and prepare dataset
 echo "[data] generating synthetic fireground scenarios..."
