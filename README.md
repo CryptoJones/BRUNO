@@ -9,6 +9,11 @@ Named after **Chief Alan Brunacini** of the Phoenix Fire Department — the fath
 
 Part of the **Ronin 48** suite alongside SELMA, BONES, ABBY, and ATTICUS.
 
+[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg?logo=apache)](https://opensource.org/licenses/Apache-2.0)
+[![HuggingFace](https://img.shields.io/badge/HuggingFace-Ronin48LLC%2Fbruno--lora--adapter-FFD21E?logo=huggingface&logoColor=000)](https://huggingface.co/Ronin48LLC/bruno-lora-adapter)
+[![Codeberg](https://img.shields.io/badge/Codeberg-Ronin48%2FBRUNO-2185D0?logo=codeberg&logoColor=white)](https://codeberg.org/Ronin48/BRUNO)
+[![GitHub](https://img.shields.io/badge/GitHub-CryptoJones%2FBRUNO-181717?logo=github&logoColor=white)](https://github.com/CryptoJones/BRUNO)
+
 ---
 
 ## Supporters
