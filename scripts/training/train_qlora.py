@@ -69,8 +69,7 @@ def main():
     model = AutoModelForCausalLM.from_pretrained(
         model_cfg["base_model"],
         quantization_config=bnb_config,
-        device_map=model_cfg["device_map"],
-        torch_dtype=getattr(torch, model_cfg["torch_dtype"]),
+        device_map={"": 0},
     )
     model = prepare_model_for_kbit_training(model)
 
