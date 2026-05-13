@@ -32,7 +32,7 @@ BRUNO is community-funded. Every contribution keeps this project free, open, and
 | **Role** | Fire service tactical decision support |
 | **Users** | Firefighters, Company Officers, Incident Commanders |
 | **Base Model** | `meta-llama/Llama-3.3-70B-Instruct` (fine-tuned) |
-| **Baseline** | `meta-llama/Llama-3.1-8B-Instruct` (prompt-only) |
+| **Baseline** | `meta-llama/Llama-3.3-70B-Instruct` (prompt-only) |
 | **Suite** | Ronin 48 — Model #5 |
 
 ---
@@ -170,3 +170,7 @@ BRUNO's file links there and will capture any BRUNO-specific issues as they aris
 ## License
 
 MIT License — see [LICENSE](LICENSE)
+
+---
+
+Proudly Made in Nebraska. Go Big Red!
