@@ -12,9 +12,8 @@ from transformers import (
     AutoModelForCausalLM,
     AutoTokenizer,
     BitsAndBytesConfig,
-    TrainingArguments,
 )
-from trl import SFTTrainer
+from trl import SFTConfig, SFTTrainer
 
 REPO_ROOT = Path(__file__).resolve().parent.parent.parent
 
@@ -87,7 +86,8 @@ def main():
     dataset = dataset.map(lambda x: format_messages(x, tokenizer))
     split = dataset.train_test_split(test_size=1 - data_cfg["train_split"], seed=42)
 
-    training_args = TrainingArguments(
+    training_args = SFTConfig(
+        max_seq_length=data_cfg["max_seq_length"],
         output_dir=train_cfg["output_dir"],
         num_train_epochs=train_cfg["num_train_epochs"],
         per_device_train_batch_size=train_cfg["per_device_train_batch_size"],
@@ -113,7 +113,6 @@ def main():
         eval_dataset=split["test"],
         peft_config=peft_config,
         dataset_text_field="text",
-        max_seq_length=data_cfg["max_seq_length"],
         processing_class=tokenizer,
         args=training_args,
     )
