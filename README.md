@@ -1,5 +1,8 @@
 # BRUNO — Building Rescue and Unified Navigation Operations
 
+> **Before deploying in an operational context, read [LIMITATIONS.md](LIMITATIONS.md).**
+
+
 > *"There is no call too routine or too small to treat with complete respect."*
 > — Chief Alan Brunacini, Phoenix Fire Department
 
