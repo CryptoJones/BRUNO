@@ -11,7 +11,17 @@ it has the most complete record of the first training run.
 
 ## BRUNO-Specific Notes
 
-*Nothing to record yet. If you hit a BRUNO-specific error and fix it, add it here.*
+### Disk Requirements (Llama-3.3-70B)
+
+BRUNO uses Llama-3.3-70B, same as BONES. **Minimum volume: 200 GB. Recommended: 300 GB.**
+A 100 GB volume will fill at shard 22/30 during model download and crash training before
+the GPU ever activates.
+
+The training monitor has been updated with pre-flight disk checks to catch this before
+wasting time and credits. See [ABBY Error #20](https://codeberg.org/Ronin48/ABBY/raw/branch/main/LESSONS_LEARNED.md)
+for full details.
+
+**Rule: `GPU 0% | active=False` after 20+ minutes = crashed. SSH in and check `/workspace/logs/train.log`.**
 
 ---
 
