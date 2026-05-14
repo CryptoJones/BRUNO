@@ -89,7 +89,7 @@ wait $TRAIN_PID
 echo "=== $REPO_NAME training complete $(date) ==="
 
 # Upload adapter to HuggingFace
-ADAPTER_DIR="/workspace/BRUNO/models/bruno-lora/final"
+ADAPTER_DIR="/workspace/BRUNO/models/bruno-lora"
 HF_REPO="Ronin48LLC/bruno-lora-adapter"
 if [ -d "$ADAPTER_DIR" ]; then
     echo "[upload] pushing adapter to $HF_REPO..."
