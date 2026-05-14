@@ -88,6 +88,7 @@ def main():
 
     training_args = SFTConfig(
         max_seq_length=data_cfg["max_seq_length"],
+        dataset_text_field="text",
         output_dir=train_cfg["output_dir"],
         num_train_epochs=train_cfg["num_train_epochs"],
         per_device_train_batch_size=train_cfg["per_device_train_batch_size"],
@@ -112,7 +113,6 @@ def main():
         train_dataset=split["train"],
         eval_dataset=split["test"],
         peft_config=peft_config,
-        dataset_text_field="text",
         processing_class=tokenizer,
         args=training_args,
     )
